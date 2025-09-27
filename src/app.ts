@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import { CourseRoutes } from "./app/modules/course/courseRouter";
 import { MentorRoutes } from "./app/modules/mentors/mentorRouters";
 import { StudentRoutes } from "./app/modules/students/student.router";
+import { ReviewRoutes } from "./app/modules/review/review.router";
 
 const app:Application = express()
 
@@ -14,9 +15,10 @@ app.use(cors());
 dotenv.config();
 
 // custom middleware 
-app.use ("api/Course",CourseRoutes);
-app.use ("api/Mentor",MentorRoutes);
-app.use ("api/Student",StudentRoutes)
+app.use ("api/course",CourseRoutes);
+app.use ("api/mentors",MentorRoutes);
+app.use ("api/students",StudentRoutes);
+app.use("/api/reviews", ReviewRoutes);
 
 
 

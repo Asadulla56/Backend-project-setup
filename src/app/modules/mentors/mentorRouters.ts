@@ -1,6 +1,19 @@
-import express from "express";
+import { Router } from "express";
+import {
+  createMentor,
+  getAllMentors,
+  getMentorById,
+  updateMentor,
+  deleteMentor,
+} from "./mentorController";
 
- const router = express.Router();
- router.post("./create-mentor",);
+const router = Router();
 
- export const MentorRoutes= router;
+
+router.post("/create", createMentor);
+router.get("/", getAllMentors);
+router.get("/:id", getMentorById);
+router.put("/:id", updateMentor);
+router.delete("/:id", deleteMentor);
+
+export const MentorRoutes = router;

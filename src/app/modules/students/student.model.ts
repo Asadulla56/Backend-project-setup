@@ -4,7 +4,7 @@ import { IStudent } from "./student.interface";
 
 
 const studentSchema = new Schema<IStudent>({
-_id: { type: String, required: true },
+_id: { type: Schema.Types.ObjectId, required: true },
   id: { type: String, required: true },
   name: { type: String, required: true },
     gender: {
