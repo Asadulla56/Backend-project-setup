@@ -18,7 +18,7 @@ dotenv.config();
 app.use ("api/course",CourseRoutes);
 app.use ("api/mentors",MentorRoutes);
 app.use ("api/students",StudentRoutes);
-app.use("/api/reviews", ReviewRoutes);
+app.use("api/reviews", ReviewRoutes);
 
 
 
